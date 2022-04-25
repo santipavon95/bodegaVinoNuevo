@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
+/* agregué grandiete al body */
+
 .body{
     font-family: 'League Spartan', sans-serif;
-    background-color: #f1f2fc;
+    background-image: linear-gradient(to right, rgb(252, 210, 186), rgb(253, 199, 154), rgb(245, 176, 139));
     display: grid;
     gap: 20px;
     grid-template-areas: "header header header header"
@@ -57,6 +59,20 @@
     padding: 45px;
 }
 
+.enlace{
+    color: #dfe1ee;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17.5px;
+}
+
+/* agregué transformacion y transicion al menú */
+
+.menuLista:hover{
+    transform: scale(1.2);
+    transition: 0.7s;
+}
+
 .subtitulo{
     display: flex;
     justify-content: center;
@@ -87,6 +103,13 @@
     border: 10px double #dfe1ee;
     position: sticky;
     top: 0;
+}
+
+/* agregué transformacion y sombra a la reserva */
+
+.reserva:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px rgb(219, 198, 190);
 }
 
 .enlaceRelativo{
@@ -184,16 +207,25 @@
     padding: 10px;
 }
 
-.enlace{
-    color: #dfe1ee;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 17.5px;
+/* agregué transformaciones y transiciones a las fotos de galería */
+
+.fotoBarrica:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.fotoSalon:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.fotoViñedo:hover{
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 .volver{
     grid-area: volver;
-    background-color: #f1f2fc;
     margin-top: 150px;
     text-align: center;
 }
@@ -237,6 +269,16 @@
 
 .linkRedes{
     text-decoration: none;
+}
+
+/* agregué escalas a los logos de redes sociales en el footer */
+
+.fotoInstagram:hover{
+    transform: scale(1.1);
+}
+
+.fotoTwitter:hover{
+    transform: scale(1.1);
 }
 
 @media only screen and (min-width: 300px) and (max-width: 600px){
@@ -521,4 +563,21 @@
         height: 20px;
         width: 20px;
     }
+}
+
+/* estructura de contacto.html */
+
+.logoenContacto{
+    height: 200px;
+    width: 200px;
+}
+
+.bodyContacto{
+    background-image: linear-gradient(to right, rgb(252, 210, 186), rgb(253, 199, 154), rgb(245, 176, 139));
+}
+
+.liContacto{
+    font-size: 20px;
+    padding: 40px;
+    text-transform: uppercase;
 }
