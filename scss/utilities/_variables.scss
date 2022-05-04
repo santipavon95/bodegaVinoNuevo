@@ -1,0 +1,71 @@
+// variable (suma, resta)
+
+$font-principal: 18px;
+
+// lista
+
+$colores: #dfe1ee, #101018, black;
+
+// mixin sin parámetros
+
+@mixin fotos{
+    height: 400px;
+    width: 600px;
+}
+
+@mixin galeria{
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+}
+
+@mixin galeriaHover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+@mixin redes{
+    height: 35px;
+    width: 35px;
+}
+
+@mixin nav{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-content: center;
+    justify-content: center;
+}
+
+@mixin informacionvinos1{
+    text-align: justify;
+    display: flex;
+    height: 400px;
+    width: 300px;
+    margin-left: 30px;
+    color: nth($colores,3);
+    font-size: $font-principal + 4;
+    overflow: hidden;
+}
+
+@mixin informacionvinos2{
+    text-align: justify;
+    display: flex;
+    justify-content: flex-end;
+    height: 400px;
+    width: 300px;
+    margin-right: 30px;
+    color: nth($colores,3);
+    font-size: $font-principal + 4;
+    overflow: hidden;
+}
+
+@mixin volver{
+    grid-area: volver;
+    margin-top: 150px;
+    text-align: center;
+}
+
+@mixin arriba{
+    text-decoration: none;
+    color: nth($colores,3);
+}

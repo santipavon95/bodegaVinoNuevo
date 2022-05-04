@@ -1,0 +1,485 @@
+@import "../utilities/variables";
+
+.bodyVinos{
+    font-family: 'League Spartan', sans-serif;
+    display: grid;
+    gap: $font-principal;
+    background-image: linear-gradient(to right, rgb(231, 220, 216), rgb(231, 183, 165), rgb(218, 149, 125));
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "volver volver volver volver"
+                         "footer footer footer footer";
+}
+
+.headerVinos{
+    grid-area: header;
+    background-image: url("../img/vinos.jpg");
+    background-size: cover;
+    .logomenuVinos{
+        @include nav;
+        .encabezadoVinos{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            .logoBodega{
+                height: 200px;
+                width: 200px;
+                margin-left: 10px;
+            }
+        }
+        .menuVinos{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .menulistaVinos{
+                display: inline-block;
+                padding: 45px;
+                .enlaceVinos{
+                    color: nth($colores,1);
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: $font-principal;
+                }
+            }
+            .menulistaVinos:hover{
+                transform: scale(1.2);
+                transition: 0.7s;
+            }
+        }
+    }
+    .subtituloVinos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: nth($colores,1);
+        font-size: $font-principal + 12;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .parrafoinicialVinos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: nth($colores,1);
+        text-align: center;
+        font-size: $font-principal - 0.5;
+        margin-bottom: 150px;
+    }
+}
+
+.mainVinos{
+    grid-area: main;
+    .reservaVinos{
+        color: nth($colores,2);
+        text-transform: uppercase;
+        margin-top: 10px;
+        display: inline-block;
+        border: 10px double nth($colores,1);
+        position: sticky;
+        top: 0;
+        .enlacerelativoVinos{
+            text-decoration: none;
+            color: nth($colores,2);
+            font-weight: bold;
+        }    
+    }
+    .reservaVinos:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 2px rgb(219, 198, 190);
+        }
+    }
+
+    .tituloVinos{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: $font-principal + 8;
+        margin: 10px;
+    }
+
+    .informacionVinos{
+        font-size: $font-principal + 5;
+        text-align: justify;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 30px;
+        .infoVariedades{
+            margin: 15px;
+        }
+    }
+
+    .cabernetSauvignon{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        .fotoCabernet{
+            @include fotos;
+        }
+        .informacionCabernet{
+            @include informacionvinos1;
+        }
+    }
+
+    .cabernetVazquez{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .informacionVazquez{
+            @include informacionvinos2;
+        }
+        .fotoVazquez{
+            @include fotos;
+        }
+    }
+
+    .merlotHeredia{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        .fotoMerlot{
+            @include fotos;
+        }
+        .informacionMerlot{
+            @include informacionvinos1;
+        }
+    }
+
+    .premiumCarmenere{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .informacionCarmenere{
+            @include informacionvinos2;
+        }
+        .fotoCarmenere{
+            @include fotos;
+        }
+    }
+
+.volverVinos{
+    @include volver;
+    .linkarribaVinos{
+        @include arriba;
+    }
+}
+
+// media querie mobile nuestrosVinos.html
+
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    .body{
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "volver volver volver volver"
+                             "footer footer footer footer";
+    }
+    .headerVinos{
+        grid-area: header;
+        .logomenuVinos{
+            display: flex;
+            flex-direction: column;
+            .encabezadoVinos{
+                text-align: center;
+                .logoBodega{
+                    height: 130px;
+                    width: 130px;
+                }
+            }
+            .menuVinos{
+                margin: 5px;
+                padding: 5px;
+                .menulistaVinos{
+                    padding: 5px;
+                    .enlaceVinos{
+                        font-size: $font-principal - 5.5;
+                    }
+                }
+            }
+        }
+        .subtituloVinos{
+            margin-top: 15px;
+            font-size: $font-principal - 3;
+        }
+        .parrafoinicialVinos{
+            font-size: $font-principal - 4.5;
+            margin-bottom: 50px;
+        }
+    }
+    .mainVinos{
+        grid-area: main;
+        .reservaVinos{
+            margin-top: 5px;
+            font-size: $font-principal - 7;
+            border: 3.5px double nth($colores,1);
+        }
+        .tituloVinos{
+            font-size: $font-principal;
+        }
+        .informacionVinos{
+            font-size: $font-principal - 2;
+            text-align: justify;
+            margin-left: 60px;
+            margin-right: 60px;
+            .infoVariedades{
+                margin: 15px;
+            }
+        }
+        .cabernetSauvignon{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoCabernet{
+                height: 200px;
+                width: 300px;
+            }
+            .informacionCabernet{
+                height: 110px;
+                width: 300px;
+                margin-left: 0px;
+                margin-top: 10px;
+                font-size: $font-principal - 4.5;
+            }
+        }
+        .cabernetVazquez{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoVazquez{
+                height: 200px;
+                width: 300px;
+            }
+            .informacionVazquez{
+                height: 130px;
+                width: 300px;
+                margin-right: 0px;
+                margin-bottom: 10px;
+                font-size: $font-principal - 4.5;
+            }
+        }
+        .merlotHeredia{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoMerlot{
+                height: 200px;
+                width: 300px;
+            }
+            .informacionMerlot{
+                height: 130px;
+                width: 300px;
+                margin-left: 0px;
+                margin-top: 10px;
+                font-size: $font-principal - 4.5;
+            }
+        }
+        .premiumCarmenere{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoCarmenere{
+                height: 200px;
+                width: 300px;
+            }
+            .informacionCarmenere{
+                height: 110px;
+                width: 300px;
+                margin-right: 0px;
+                margin-bottom: 10px;
+                font-size: $font-principal - 4.5;
+            }
+        }
+    }
+
+    .volverVinos{
+        display: none;
+    }
+
+    .footerFlex{
+        .footerUno{
+            text-align: center;
+            margin: 15px;
+            text-transform: uppercase;
+            font-size: $font-principal - 6;
+        }
+        .footerDos{
+            font-size: $font-principal -6;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .linkRedes{
+            .fotoTwitter{
+                height: 15px;
+                width: 15px;
+            }
+            .fotoInstagram{
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }
+}
+
+// media querie tablet de nuestrosVinos.html
+
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .body{
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "volver volver volver volver"
+                             "footer footer footer footer";
+    }
+    .headerVinos{
+        grid-area: header;
+        .logomenuVinos{
+            display: flex;
+            flex-direction: column;
+            .encabezadoVinos{
+                text-align: center;
+                .logoBodega{
+                    height: 175px;
+                    width: 175px;
+                }
+            }
+            .menuVinos{
+                margin: 5px;
+                padding: 5px;
+                .menulistaVinos{
+                    padding: 5px;
+                    .enlaceVinos{
+                        font-size: $font-principal - 1;
+                    }
+                }
+            }
+        }
+        .subtituloVinos{
+            margin-top: 15px;
+            font-size: $font-principal +2 ;
+        }
+        .parrafoinicialVinos{
+            font-size: $font-principal - 1;
+            margin-bottom: 100px;
+        }
+    }
+    .mainVinos{
+        grid-area: main;
+        .reservaVinos{
+            margin-top: 7.5px;
+            margin-bottom: 20px;
+            font-size: $font-principal - 4.5;
+            border: 4.5px double nth($colores,1);
+        }
+        .tituloVinos{
+            font-size: $font-principal +4;
+        }
+        .informacionVinos{
+            font-size: $font-principal + 2;
+            text-align: justify;
+            margin-left: 60px;
+            margin-right: 60px;
+            .infoVariedades{
+                margin: 15px;
+            }
+        }
+        .cabernetSauvignon{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoCabernet{
+                height: 300px;
+                width: 450px;
+            }
+            .informacionCabernet{
+                height: 200px;
+                width: 450px;
+                margin-left: 0px;
+                margin-top: 10px;
+                font-size: $font-principal -0.5;
+            }
+        }
+        .cabernetVazquez{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoVazquez{
+                height: 300px;
+                width: 450px;
+            }
+            .informacionVazquez{
+                height: 250px;
+                width: 450px;
+                margin-right: 0px;
+                margin-bottom: 10px;
+                font-size: $font-principal -0.5;
+            }
+        }
+        .merlotHeredia{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoMerlot{
+                height: 300px;
+                width: 450px;
+            }
+            .informacionMerlot{
+                height: 250px;
+                width: 450px;
+                margin-left: 0px;
+                margin-top: 10px;
+                font-size: $font-principal -0.5;
+            }
+        }
+        .premiumCarmenere{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .fotoCarmenere{
+                height: 300px;
+                width: 450px;
+            }
+            .informacionCarmenere{
+                height: 200px;
+                width: 450px;
+                margin-right: 0px;
+                margin-bottom: 10px;
+                font-size: $font-principal -0.5;
+            }
+        }
+    }
+
+    .volverVinos{
+        display: none;
+    }
+
+    .footerFlex{
+        .footerUno{
+            text-align: center;
+            margin: 15px;
+            text-transform: uppercase;
+            font-size: $font-principal - 4;
+        }
+        .footerDos{
+            font-size: $font-principal - 4;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .linkRedes{
+            .fotoTwitter{
+                height: 20px;
+                width: 20px;
+            }
+            .fotoInstagram{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}

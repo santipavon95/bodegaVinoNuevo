@@ -1,79 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/* agregué grandiete al body */
+.bodyContacto {
+  font-family: 'League Spartan', sans-serif;
+  display: grid;
+  gap: 18px;
+  background-image: linear-gradient(to right, #e7dcd8, #e7b7a5, #da957d);
+  grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
 
-.body{
-    font-family: 'League Spartan', sans-serif;
-    background-image: linear-gradient(to right, rgb(231, 220, 216), rgb(231, 183, 165), rgb(218, 149, 125));
-    display: grid;
-    gap: 20px;
-    grid-template-areas: "header header header header"
-                         "main main main main"
-                         "galeria galeria galeria galeria"
-                         "volver volver volver volver"
-                         "footer footer footer footer";
-}
-
-.main{
-    grid-area: main;
-}
-
-.logoBodega{
-    height: 200px;
-    width: 200px;
-    margin-left: 10px;
-}
-
-.header{
-    grid-area: header;
-    background-image: url("../img/viñedoreal.jpeg");
-    background-size: cover;
-}
-
-.logoMenu{
+.headerContacto {
+  grid-area: header;
+  background-image: url("../img/entradabodegaPavon.jpg");
+  background-size: cover; }
+  .headerContacto .logomenuContacto {
     display: grid;
     grid-template-columns: 10% 90%;
     align-content: center;
-    justify-content: center;
-}
-
-.encabezado{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.menu{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menuLista{
-    display: inline-block;
-    padding: 45px;
-}
-
-.enlace{
-    color: #dfe1ee;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 17.5px;
-}
-
-/* agregué transformacion y transicion al menú */
-
-.menuLista:hover{
-    transform: scale(1.2);
-    transition: 0.7s;
-}
-
-.subtitulo{
+    justify-content: center; }
+    .headerContacto .logomenuContacto .encabezadoContacto {
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+      .headerContacto .logomenuContacto .encabezadoContacto .logoenContacto {
+        height: 200px;
+        width: 200px;
+        margin-left: 10px; }
+    .headerContacto .logomenuContacto .menuContacto {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .headerContacto .logomenuContacto .menuContacto .menulistaContacto {
+        display: inline-block;
+        padding: 45px; }
+        .headerContacto .logomenuContacto .menuContacto .menulistaContacto .enlaceContacto {
+          color: #dfe1ee;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 18px; }
+      .headerContacto .logomenuContacto .menuContacto .menulistaContacto:hover {
+        transform: scale(1.2);
+        transition: 0.7s; }
+  .headerContacto .subtituloContacto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,553 +53,642 @@
     color: #dfe1ee;
     font-size: 30px;
     text-transform: uppercase;
-    text-align: center;
-}
-
-.parrafoInicial{
+    text-align: center; }
+  .headerContacto .parrafoinicialContacto {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #dfe1ee;
     text-align: center;
     font-size: 17.5px;
-    margin-bottom: 150px;
-}
+    margin-bottom: 150px; }
 
-.reserva{
+.mainContacto {
+  grid-area: main; }
+  .mainContacto .formulario {
+    display: flex;
+    justify-content: center; }
+    .mainContacto .formulario fieldset {
+      font-size: 20px;
+      display: grid;
+      justify-content: left;
+      width: 800px;
+      padding: 20px;
+      margin: 10px; }
+    .mainContacto .formulario .bordeFormulario {
+      border-radius: 10px; }
+      .mainContacto .formulario .bordeFormulario legend {
+        text-align: center;
+        font-size: 22.5px; }
+      .mainContacto .formulario .bordeFormulario .opcionesFormulario {
+        padding: 12px;
+        margin: 5px; }
+        .mainContacto .formulario .bordeFormulario .opcionesFormulario .nombreApellido {
+          width: 550px;
+          opacity: 0.6; }
+        .mainContacto .formulario .bordeFormulario .opcionesFormulario .emailContacto {
+          width: 500px;
+          opacity: 0.6; }
+      .mainContacto .formulario .bordeFormulario .opcionesformularioMensaje {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        margin: 5px; }
+        .mainContacto .formulario .bordeFormulario .opcionesformularioMensaje .mensajeContacto {
+          margin-bottom: 5px; }
+        .mainContacto .formulario .bordeFormulario .opcionesformularioMensaje .texterea {
+          width: 700px;
+          opacity: 0.6; }
+
+.volverContacto {
+  grid-area: volver;
+  margin-top: 150px;
+  text-align: center; }
+  .volverContacto .linkarribaContacto {
+    text-decoration: none;
+    color: black; }
+
+.footer {
+  grid-area: footer; }
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .bodyContacto {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerContacto {
+    display: grid;
+    justify-content: center;
+    align-items: center; }
+    .headerContacto .logomenuContacto {
+      display: flex;
+      flex-direction: column; }
+      .headerContacto .logomenuContacto .encabezadoContacto {
+        text-align: center; }
+        .headerContacto .logomenuContacto .encabezadoContacto .logoenContacto {
+          height: 130px;
+          width: 130px; }
+      .headerContacto .logomenuContacto .menuContacto {
+        margin: 5px;
+        padding: 5px; }
+        .headerContacto .logomenuContacto .menuContacto .menulistaContacto {
+          padding: 5px; }
+          .headerContacto .logomenuContacto .menuContacto .menulistaContacto .enlaceContacto {
+            font-size: 12.5px; }
+    .headerContacto .subtituloContacto {
+      margin-top: 15px;
+      font-size: 15px; }
+    .headerContacto .parrafoinicialContacto {
+      font-size: 13.5px;
+      margin-bottom: 50px; }
+  .mainContacto .formulario {
+    display: grid;
+    justify-content: center; }
+    .mainContacto .formulario fieldset {
+      font-size: 15px;
+      display: grid;
+      justify-content: left;
+      width: 400px;
+      padding: 20px;
+      margin: 10px; }
+    .mainContacto .formulario .bordeFormulario {
+      border-radius: 10px; }
+      .mainContacto .formulario .bordeFormulario legend {
+        text-align: center;
+        font-size: 17.5px; }
+      .mainContacto .formulario .bordeFormulario .opcionesFormulario .nombreApellido {
+        width: 190px; }
+      .mainContacto .formulario .bordeFormulario .opcionesFormulario .emailContacto {
+        width: 210px; }
+      .mainContacto .formulario .bordeFormulario .opcionesformularioMensaje .texterea {
+        width: 300px; }
+  .volverContacto {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 12px; }
+  .footerFlex .footerDos {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 15px;
+    width: 15px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 15px;
+    width: 15px; } }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .bodyContacto {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerContacto {
+    display: grid;
+    justify-content: center;
+    align-items: center; }
+    .headerContacto .logomenuContacto {
+      display: flex;
+      flex-direction: column; }
+      .headerContacto .logomenuContacto .encabezadoContacto {
+        text-align: center; }
+        .headerContacto .logomenuContacto .encabezadoContacto .logoenContacto {
+          height: 175px;
+          width: 175px; }
+      .headerContacto .logomenuContacto .menuContacto {
+        margin: 5px;
+        padding: 5px; }
+        .headerContacto .logomenuContacto .menuContacto .menulistaContacto {
+          padding: 15px; }
+          .headerContacto .logomenuContacto .menuContacto .menulistaContacto .enlaceContacto {
+            font-size: 17px; }
+    .headerContacto .subtituloContacto {
+      margin-top: 15px;
+      font-size: 20px; }
+    .headerContacto .parrafoinicialContacto {
+      font-size: 17px;
+      margin-bottom: 100px; }
+  .mainContacto .formulario {
+    display: grid;
+    justify-content: center; }
+    .mainContacto .formulario fieldset {
+      font-size: 17.5px;
+      display: grid;
+      justify-content: left;
+      width: 600px;
+      padding: 20px;
+      margin: 10px; }
+    .mainContacto .formulario .bordeFormulario {
+      border-radius: 10px; }
+      .mainContacto .formulario .bordeFormulario legend {
+        text-align: center;
+        font-size: 20px; }
+      .mainContacto .formulario .bordeFormulario .opcionesFormulario .nombreApellido {
+        width: 345px; }
+      .mainContacto .formulario .bordeFormulario .opcionesFormulario .emailContacto {
+        width: 300px; }
+      .mainContacto .formulario .bordeFormulario .opcionesformularioMensaje .texterea {
+        width: 470px; }
+  .volverContacto {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .footerFlex .footerDos {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 20px;
+    width: 20px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 20px;
+    width: 20px; } }
+
+.bodyVinos {
+  font-family: 'League Spartan', sans-serif;
+  display: grid;
+  gap: 18px;
+  background-image: linear-gradient(to right, #e7dcd8, #e7b7a5, #da957d);
+  grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+
+.headerVinos {
+  grid-area: header;
+  background-image: url("../img/vinos.jpg");
+  background-size: cover; }
+  .headerVinos .logomenuVinos {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-content: center;
+    justify-content: center; }
+    .headerVinos .logomenuVinos .encabezadoVinos {
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+      .headerVinos .logomenuVinos .encabezadoVinos .logoBodega {
+        height: 200px;
+        width: 200px;
+        margin-left: 10px; }
+    .headerVinos .logomenuVinos .menuVinos {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .headerVinos .logomenuVinos .menuVinos .menulistaVinos {
+        display: inline-block;
+        padding: 45px; }
+        .headerVinos .logomenuVinos .menuVinos .menulistaVinos .enlaceVinos {
+          color: #dfe1ee;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 18px; }
+      .headerVinos .logomenuVinos .menuVinos .menulistaVinos:hover {
+        transform: scale(1.2);
+        transition: 0.7s; }
+  .headerVinos .subtituloVinos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #dfe1ee;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center; }
+  .headerVinos .parrafoinicialVinos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfe1ee;
+    text-align: center;
+    font-size: 17.5px;
+    margin-bottom: 150px; }
+
+.mainVinos {
+  grid-area: main; }
+  .mainVinos .reservaVinos {
     color: #101018;
     text-transform: uppercase;
     margin-top: 10px;
     display: inline-block;
     border: 10px double #dfe1ee;
     position: sticky;
-    top: 0;
-}
-
-/* agregué transformacion y sombra a la reserva */
-
-.reserva:hover{
+    top: 0; }
+    .mainVinos .reservaVinos .enlacerelativoVinos {
+      text-decoration: none;
+      color: #101018;
+      font-weight: bold; }
+  .mainVinos .reservaVinos:hover {
     transform: scale(1.1);
-    box-shadow: 2px 2px rgb(219, 198, 190);
-}
+    box-shadow: 2px 2px #dbc6be; }
 
-.enlaceRelativo{
-    text-decoration: none;
-    color:#101018;
-    font-weight: bold;
-}
+.tituloVinos {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px;
+  margin: 10px; }
 
-.primeraParte{
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
+.informacionVinos {
+  font-size: 23px;
+  text-align: justify;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 30px; }
+  .informacionVinos .infoVariedades {
+    margin: 15px; }
 
-.informacionPrincipal{
+.cabernetSauvignon {
+  display: flex;
+  flex-flow: row;
+  justify-content: center; }
+  .cabernetSauvignon .fotoCabernet {
+    height: 400px;
+    width: 600px; }
+  .cabernetSauvignon .informacionCabernet {
     text-align: justify;
     display: flex;
     height: 400px;
     width: 300px;
     margin-left: 30px;
     color: black;
-    font-size: 20px;
-    overflow: hidden;
-}
+    font-size: 22px;
+    overflow: hidden; }
 
-.fotoSierra{
-    height: 400px;
-    width: 600px;
-}
-
-.segundaParte{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.informacionSecundaria{
+.cabernetVazquez {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cabernetVazquez .informacionVazquez {
     text-align: justify;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     height: 400px;
     width: 300px;
     margin-right: 30px;
     color: black;
-    font-size: 20px;
-    overflow: hidden;
-}
-
-.fotoUva{
+    font-size: 22px;
+    overflow: hidden; }
+  .cabernetVazquez .fotoVazquez {
     height: 400px;
-    width: 600px;
-}
+    width: 600px; }
 
-.galeria{
-    grid-area: galeria;
-}
-
-.tituloGaleria{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.galeriaFlex{
+.merlotHeredia {
+  display: flex;
+  flex-flow: row;
+  justify-content: center; }
+  .merlotHeredia .fotoMerlot {
+    height: 400px;
+    width: 600px; }
+  .merlotHeredia .informacionMerlot {
+    text-align: justify;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.imagenes{
-    display: flex;
-}
-
-.fotoBarrica{
-    height: 300px;
+    height: 400px;
     width: 300px;
-    padding: 10px;
-}
-
-.fotoSalon{
-    height: 300px;
-    width: 300px;
-    padding: 10px;
-}
-
-.fotoViñedo{
-    height: 300px;
-    width: 300px;
-    padding: 10px;
-}
-
-/* agregué transformaciones y transiciones a las fotos de galería */
-
-.fotoBarrica:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-.fotoSalon:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-.fotoViñedo:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-
-.volver{
-    grid-area: volver;
-    margin-top: 150px;
-    text-align: center;
-}
-
-.linkArriba{
-    text-decoration: none;
+    margin-left: 30px;
     color: black;
-}
+    font-size: 22px;
+    overflow: hidden; }
 
-.footer{
-    grid-area: footer;
-}
-
-.footerFlex{
+.premiumCarmenere {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .premiumCarmenere .informacionCarmenere {
+    text-align: justify;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: #f1f2fc;
-}
+    justify-content: flex-end;
+    height: 400px;
+    width: 300px;
+    margin-right: 30px;
+    color: black;
+    font-size: 22px;
+    overflow: hidden; }
+  .premiumCarmenere .fotoCarmenere {
+    height: 400px;
+    width: 600px; }
 
-.footerUno{
-    margin: 30px;
-    text-transform: uppercase;
-}
-
-.footerDos{
-    margin-bottom: 30px;
-}
-
-.fotoTwitter{
-    height: 35px;
-    width: 35px;
-}
-
-.fotoInstagram{
-    height: 35px;
-    width: 35px;
-}
-
-.linkRedes{
+.volverVinos {
+  grid-area: volver;
+  margin-top: 150px;
+  text-align: center; }
+  .volverVinos .linkarribaVinos {
     text-decoration: none;
-}
+    color: black; }
 
-/* agregué escalas a los logos de redes sociales en el footer */
-
-.fotoInstagram:hover{
-    transform: scale(1.1);
-}
-
-.fotoTwitter:hover{
-    transform: scale(1.1);
-}
-
-/* media querie mobile del Index */
-
-@media only screen and (min-width: 300px) and (max-width: 600px){
-    .body{
-        display: grid;
-        grid-template-areas: "header header header header"
-                             "main main main main"
-                             "galeria galeria galeria galeria"
-                             "volver volver volver volver"
-                             "footer footer footer footer";
-    }
-
-    .logoBodega{
-        height: 130px;
-        width: 130px;
-    }
-
-    .encabezado{
-        text-align: center;
-    }
-
-    .logoMenu{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu{
-        margin: 5px;
-        padding: 5px;
-    }
-
-    .menuLista{
-        padding: 5px;
-    }
-
-    .enlace{
-        font-size: 12.5px;
-    }
-
-    .subtitulo{
-        margin-top: 15px;
-        font-size: 15px;
-    }
-
-    .parrafoInicial{
-        font-size: 13.5px;
-        margin-bottom: 50px;
-    }
-
-    .reserva{
-        margin-top: 5px;
-        font-size: 11px;
-        border: 3.5px double #dfe1ee;
-    }
-
-    .primeraParte{
-        margin-top: 15px;
-        display: grid;
-        align-items: center;
-    }
-
-    .informacionPrincipal{
-        height: 200px;
-        width: 300px;
-        margin-left: 0px;
-        font-size: 13.5px;
-    }
-    
-    .fotoSierra{
-        height: 200px;
-        width: 300px;
-    }
-
-    .segundaParte{
-        display: grid;
-        align-items: center;
-        margin-top: 5px;
-    }
-    
-    .informacionSecundaria{
-        height: 200px;
-        width: 300px;
-        margin-right: 0px;
-        font-size: 13.5px;
-    }
-    
-    .fotoUva{
-        height: 200px;
-        width: 300px;
-    }
-
-    .tituloGaleria{
-        font-size: 13.5px;
-    }
-
-    .imagenes{
-        display: grid;
-    }
-    
-    .fotoBarrica{
-        padding: 5px;
-        margin: 0px;
-        height: 175px;
-        width: 175px;
-    }
-    
-    .fotoSalon{
-        padding: 5px;
-        margin: 0px;
-        height: 175px;
-        width: 175px;
-    }
-    
-    .fotoViñedo{
-        padding: 5px;
-        margin: 0px;
-        height: 175px;
-        width: 175px;
-    }
-
-    .volver{
-        display: none;
-    }
-    
-    .footerUno{
-        text-align: center;
-        margin: 15px;
-        text-transform: uppercase;
-        font-size: 12px;
-    }
-    
-    .footerDos{
-        font-size: 12px;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .fotoTwitter{
-        height: 15px;
-        width: 15px;
-    }
-    
-    .fotoInstagram{
-        height: 15px;
-        width: 15px;
-    }
-}
-
-/* media queri tablet del Index */
-
-@media only screen and (min-width: 601px) and (max-width: 1024px){
-    .body{
-        display: grid;
-        grid-template-areas: "header header header header"
-                             "main main main main"
-                             "galeria galeria galeria galeria"
-                             "volver volver volver volver"
-                             "footer footer footer footer";
-    }
-
-    .logoBodega{
-        height: 175px;
-        width: 175px;
-    }
-
-    .encabezado{
-        text-align: center;
-    }
-
-    .logoMenu{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu{
-        margin: 5px;
-        padding: 5px;
-    }
-
-    .menuLista{
-        padding: 5px;
-    }
-
-    .enlace{
-        font-size: 14px;
-    }
-
-    .subtitulo{
-        margin-top: 15px;
-        font-size: 20px;
-    }
-
-    .parrafoInicial{
-        margin-bottom: 100px;
-        font-size: 17px;
-    }
-
-    .reserva{
-        margin-top: 7.5px;
-        margin-bottom: 20px;
-        font-size: 13.5px;
-        border: 4.5px double #dfe1ee;
-    }
-
-    .primeraParte{
-        display: grid;
-        align-items: center;
-    }
-
-    .informacionPrincipal{
-        height: 200px;
-        width: 450px;
-        margin-left: 0px;
-        font-size: 17.5px;
-        margin-bottom: 0px;
-    }
-    
-    .fotoSierra{
-        height: 300px;
-        width: 450px;
-    }
-
-    .segundaParte{
-        display: grid;
-        align-items: center;
-    }
-    
-    .informacionSecundaria{
-        height: 200px;
-        width: 450px;
-        margin-right: 0px;
-        font-size: 17.5px;
-    }
-    
-    .fotoUva{
-        height: 300px;
-        width: 450px;
-    }
-
-    .tituloGaleria{
-        font-size: 17.5px;
-    }
-
-    .fotoBarrica{
-        padding: 5px;
-        margin: 0px;
-        height: 200px;
-        width: 200px;
-    }
-    
-    .fotoSalon{
-        padding: 5px;
-        margin: 0px;
-        height: 200px;
-        width: 200px;
-    }
-    
-    .fotoViñedo{
-        padding: 5px;
-        margin: 0px;
-        height: 200px;
-        width: 200px;
-    }
-    
-    .footerUno{
-        text-align: center;
-        margin: 15px;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-    
-    .footerDos{
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .fotoTwitter{
-        height: 20px;
-        width: 20px;
-    }
-    
-    .fotoInstagram{
-        height: 20px;
-        width: 20px;
-    }
-}
-
-/* estructura de contacto.html */
-
-.bodyContacto{
-    font-family: 'League Spartan', sans-serif;
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .body {
     display: grid;
-    gap: 20px;
-    background-image: linear-gradient(to right, rgb(231, 220, 216), rgb(231, 183, 165), rgb(218, 149, 125));
-    grid-template-areas: "header header header header"
-                         "main main main main"
-                         "volver volver volver volver"
-                         "footer footer footer footer";
-}
-
-.logoenContacto{
-    height: 200px;
-    width: 200px;
-    margin-left: 10px;
-}
-
-.encabezadoContacto{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.headerContacto{
-    grid-area: header;
-    background-image: url("../img/entradabodegaPavon.jpg");
-    background-size: cover;
-}
-
-.mainContacto{
-    grid-area: main;
-}
-
-.menuContacto{
+    gap: 5px;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerVinos {
+    grid-area: header; }
+    .headerVinos .logomenuVinos {
+      display: flex;
+      flex-direction: column; }
+      .headerVinos .logomenuVinos .encabezadoVinos {
+        text-align: center; }
+        .headerVinos .logomenuVinos .encabezadoVinos .logoBodega {
+          height: 130px;
+          width: 130px; }
+      .headerVinos .logomenuVinos .menuVinos {
+        margin: 5px;
+        padding: 5px; }
+        .headerVinos .logomenuVinos .menuVinos .menulistaVinos {
+          padding: 5px; }
+          .headerVinos .logomenuVinos .menuVinos .menulistaVinos .enlaceVinos {
+            font-size: 12.5px; }
+    .headerVinos .subtituloVinos {
+      margin-top: 15px;
+      font-size: 15px; }
+    .headerVinos .parrafoinicialVinos {
+      font-size: 13.5px;
+      margin-bottom: 50px; }
+  .mainVinos {
+    grid-area: main; }
+    .mainVinos .reservaVinos {
+      margin-top: 5px;
+      font-size: 11px;
+      border: 3.5px double #dfe1ee; }
+    .mainVinos .tituloVinos {
+      font-size: 18px; }
+    .mainVinos .informacionVinos {
+      font-size: 16px;
+      text-align: justify;
+      margin-left: 60px;
+      margin-right: 60px; }
+      .mainVinos .informacionVinos .infoVariedades {
+        margin: 15px; }
+    .mainVinos .cabernetSauvignon {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .cabernetSauvignon .fotoCabernet {
+        height: 200px;
+        width: 300px; }
+      .mainVinos .cabernetSauvignon .informacionCabernet {
+        height: 110px;
+        width: 300px;
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 13.5px; }
+    .mainVinos .cabernetVazquez {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .cabernetVazquez .fotoVazquez {
+        height: 200px;
+        width: 300px; }
+      .mainVinos .cabernetVazquez .informacionVazquez {
+        height: 130px;
+        width: 300px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        font-size: 13.5px; }
+    .mainVinos .merlotHeredia {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .merlotHeredia .fotoMerlot {
+        height: 200px;
+        width: 300px; }
+      .mainVinos .merlotHeredia .informacionMerlot {
+        height: 130px;
+        width: 300px;
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 13.5px; }
+    .mainVinos .premiumCarmenere {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .premiumCarmenere .fotoCarmenere {
+        height: 200px;
+        width: 300px; }
+      .mainVinos .premiumCarmenere .informacionCarmenere {
+        height: 110px;
+        width: 300px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        font-size: 13.5px; }
+  .volverVinos {
+    display: none; }
+  .footerFlex .footerUno {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menulistaContacto{
-    display: inline-block;
-    padding: 45px;
-}
-
-.menulistaContacto:hover{
-    transform: scale(1.2);
-    transition: 0.7s;
-}
-
-.enlaceContacto{
-    color: #dfe1ee;
+    margin: 15px;
     text-transform: uppercase;
-    text-decoration: none;
-    font-size: 17.5px;
-}
+    font-size: 12px; }
+  .footerFlex .footerDos {
+    font-size: 18px -6;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 15px;
+    width: 15px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 15px;
+    width: 15px; } }
 
-.subtituloContacto{
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .body {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerVinos {
+    grid-area: header; }
+    .headerVinos .logomenuVinos {
+      display: flex;
+      flex-direction: column; }
+      .headerVinos .logomenuVinos .encabezadoVinos {
+        text-align: center; }
+        .headerVinos .logomenuVinos .encabezadoVinos .logoBodega {
+          height: 175px;
+          width: 175px; }
+      .headerVinos .logomenuVinos .menuVinos {
+        margin: 5px;
+        padding: 5px; }
+        .headerVinos .logomenuVinos .menuVinos .menulistaVinos {
+          padding: 5px; }
+          .headerVinos .logomenuVinos .menuVinos .menulistaVinos .enlaceVinos {
+            font-size: 17px; }
+    .headerVinos .subtituloVinos {
+      margin-top: 15px;
+      font-size: 20px; }
+    .headerVinos .parrafoinicialVinos {
+      font-size: 17px;
+      margin-bottom: 100px; }
+  .mainVinos {
+    grid-area: main; }
+    .mainVinos .reservaVinos {
+      margin-top: 7.5px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      border: 4.5px double #dfe1ee; }
+    .mainVinos .tituloVinos {
+      font-size: 22px; }
+    .mainVinos .informacionVinos {
+      font-size: 20px;
+      text-align: justify;
+      margin-left: 60px;
+      margin-right: 60px; }
+      .mainVinos .informacionVinos .infoVariedades {
+        margin: 15px; }
+    .mainVinos .cabernetSauvignon {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .cabernetSauvignon .fotoCabernet {
+        height: 300px;
+        width: 450px; }
+      .mainVinos .cabernetSauvignon .informacionCabernet {
+        height: 200px;
+        width: 450px;
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 18px -0.5; }
+    .mainVinos .cabernetVazquez {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .cabernetVazquez .fotoVazquez {
+        height: 300px;
+        width: 450px; }
+      .mainVinos .cabernetVazquez .informacionVazquez {
+        height: 250px;
+        width: 450px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        font-size: 18px -0.5; }
+    .mainVinos .merlotHeredia {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .merlotHeredia .fotoMerlot {
+        height: 300px;
+        width: 450px; }
+      .mainVinos .merlotHeredia .informacionMerlot {
+        height: 250px;
+        width: 450px;
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 18px -0.5; }
+    .mainVinos .premiumCarmenere {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainVinos .premiumCarmenere .fotoCarmenere {
+        height: 300px;
+        width: 450px; }
+      .mainVinos .premiumCarmenere .informacionCarmenere {
+        height: 200px;
+        width: 450px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        font-size: 18px -0.5; }
+  .volverVinos {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .footerFlex .footerDos {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 20px;
+    width: 20px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 20px;
+    width: 20px; } }
+
+.bodyTurismo {
+  font-family: 'League Spartan', sans-serif;
+  display: grid;
+  gap: 18px;
+  background-image: linear-gradient(to right, #e7dcd8, #e7b7a5, #da957d);
+  grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+
+.headerTurismo {
+  grid-area: header;
+  background-image: url("../img/copitas.jpeg");
+  background-size: cover; }
+  .headerTurismo .logomenuTurismo {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-content: center;
+    justify-content: center; }
+    .headerTurismo .logomenuTurismo .encabezadoTurismo {
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+      .headerTurismo .logomenuTurismo .encabezadoTurismo .logoBodega {
+        height: 200px;
+        width: 200px;
+        margin-left: 10px; }
+    .headerTurismo .logomenuTurismo .menuTurismo {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo {
+        display: inline-block;
+        padding: 45px; }
+        .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo .enlaceTurismo {
+          color: #dfe1ee;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 18px; }
+      .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo:hover {
+        transform: scale(1.2);
+        transition: 0.7s; }
+  .headerTurismo .subtituloTurismo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -637,182 +697,915 @@
     color: #dfe1ee;
     font-size: 30px;
     text-transform: uppercase;
-    text-align: center;
-}
-
-.parrafoinicialContacto{
+    text-align: center; }
+  .headerTurismo .parrafoinicialTurismo {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #dfe1ee;
     text-align: center;
     font-size: 17.5px;
-    margin-bottom: 150px;
-}
+    margin-bottom: 150px; }
 
-.formulario{
+.mainTurismo {
+  grid-area: main; }
+  .mainTurismo .reservaTurismo {
+    color: #101018;
+    text-transform: uppercase;
+    margin-top: 10px;
+    display: inline-block;
+    border: 10px double #dfe1ee;
+    position: sticky;
+    top: 0; }
+    .mainTurismo .reservaTurismo .enlacerelativoTurismo {
+      text-decoration: none;
+      color: #101018;
+      font-weight: bold; }
+  .mainTurismo .reservaTurismo:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px #dbc6be; }
+  .mainTurismo .tituloTurismo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin: 10px; }
+  .mainTurismo .aclaraciones {
+    display: grid;
+    justify-content: center;
+    align-items: center; }
+    .mainTurismo .aclaraciones .tituloAclaracion {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 10px; }
+    .mainTurismo .aclaraciones .parrafoAclaraciones {
+      font-size: 19px;
+      padding: 5px; }
+
+.tour {
+  margin-bottom: 10px; }
+  .tour .informacionprincipalTurismo {
+    font-size: 23px;
+    text-align: justify;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px; }
+  .tour .clasesTour {
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px; }
+    .tour .clasesTour .tourClasico {
+      width: 550px;
+      height: 250px; }
+      .tour .clasesTour .tourClasico .tituloClasico {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 22px; }
+      .tour .clasesTour .tourClasico .parrafosClasico {
+        text-align: justify;
+        font-size: 19px;
+        padding: 5px;
+        margin-right: 10px; }
+    .tour .clasesTour .tourPremium {
+      width: 550px;
+      height: 250px; }
+      .tour .clasesTour .tourPremium .tituloPremium {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 22px; }
+      .tour .clasesTour .tourPremium .parrafosPremium {
+        text-align: justify;
+        font-size: 19px;
+        padding: 5px;
+        margin-left: 10px; }
 
-.bordeFormulario{
-    border-radius: 10px;
-}
+.volverTurismo {
+  grid-area: volver;
+  margin-top: 150px;
+  text-align: center; }
+  .volverTurismo .linkarribaTurismo {
+    text-decoration: none;
+    color: black; }
 
-fieldset{
-    font-size: 20px;
+.footer {
+  grid-area: footer; }
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .body {
     display: grid;
-    justify-content: left;
-    width: 800px;
-    padding: 20px;
-    margin: 10px;
-}
-
-.texterea{
-    width: 700px;
-    opacity: 0.6;
-}
-
-legend{
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerTurismo {
+    grid-area: header; }
+    .headerTurismo .logomenuTurismo {
+      display: flex;
+      flex-direction: column; }
+      .headerTurismo .logomenuTurismo .encabezadoTurismo {
+        text-align: center; }
+        .headerTurismo .logomenuTurismo .encabezadoTurismo .logoBodega {
+          height: 130px;
+          width: 130px; }
+      .headerTurismo .logomenuTurismo .menuTurismo {
+        margin: 5px;
+        padding: 5px; }
+        .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo {
+          padding: 5px; }
+          .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo .enlaceTurismo {
+            font-size: 12.5px; }
+    .headerTurismo .subtituloTurismo {
+      margin-top: 15px;
+      font-size: 15px; }
+    .headerTurismo .parrafoinicialTurismo {
+      font-size: 13.5px;
+      margin-bottom: 50px; }
+  .mainTurismo {
+    grid-area: main; }
+    .mainTurismo .reservaTurismo {
+      margin-top: 5px;
+      font-size: 11px;
+      border: 3.5px double #dfe1ee; }
+    .mainTurismo .tituloTurismo {
+      font-size: 18px; }
+    .mainTurismo .informacionprincipalTurismo {
+      font-size: 17px; }
+    .mainTurismo .clasesTour {
+      display: grid;
+      align-items: center;
+      justify-content: center; }
+      .mainTurismo .clasesTour .tourClasico {
+        width: 300px;
+        height: 200px; }
+        .mainTurismo .clasesTour .tourClasico .tituloClasico {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 16px; }
+        .mainTurismo .clasesTour .tourClasico .parrafosClasico {
+          font-size: 14px;
+          margin-right: 0px; }
+      .mainTurismo .clasesTour .tourPremium {
+        width: 300px;
+        height: 200px; }
+        .mainTurismo .clasesTour .tourPremium .tituloPremium {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 16px; }
+        .mainTurismo .clasesTour .tourPremium .parrafosPremium {
+          font-size: 14px;
+          margin-left: 0px; }
+    .mainTurismo .aclaraciones {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainTurismo .aclaraciones .tituloAclaracion {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 10px; }
+      .mainTurismo .aclaraciones .parrafoAclaraciones {
+        font-size: 14px;
+        text-align: justify;
+        margin-left: 60px;
+        margin-right: 60px; }
+  .volverTurismo {
+    display: none; }
+  .footerFlex .footerUno {
     text-align: center;
-    font-size: 22.5px;
-}
-
-.opcionesFormulario{
-    padding: 12px;
-    margin: 5px;
-}
-
-.opcionesformularioMensaje{
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    margin: 5px;
-}
-
-.nombreApellido{
-    width: 550px;
-    opacity: 0.6;
-}
-
-.emailContacto{
-    width: 500px;
-    opacity: 0.6;
-}
-
-.mensajeContacto{
-    margin-bottom: 5px;
-}
-
-.volverContacto{
-    grid-area: volver;
-    margin-top: 150px;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 12px; }
+  .footerFlex .footerDos {
+    font-size: 18px -6;
     text-align: center;
-}
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 15px;
+    width: 15px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 15px;
+    width: 15px; } }
 
-.logomenuContacto{
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .body {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerTurismo {
+    grid-area: header; }
+    .headerTurismo .logomenuTurismo {
+      display: flex;
+      flex-direction: column; }
+      .headerTurismo .logomenuTurismo .encabezadoTurismo {
+        text-align: center; }
+        .headerTurismo .logomenuTurismo .encabezadoTurismo .logoBodega {
+          height: 175px;
+          width: 175px; }
+      .headerTurismo .logomenuTurismo .menuTurismo {
+        margin: 5px;
+        padding: 5px; }
+        .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo {
+          padding: 5px; }
+          .headerTurismo .logomenuTurismo .menuTurismo .menulistaTurismo .enlaceTurismo {
+            font-size: 17px; }
+    .headerTurismo .subtituloTurismo {
+      margin-top: 15px;
+      font-size: 20px; }
+    .headerTurismo .parrafoinicialTurismo {
+      font-size: 17px;
+      margin-bottom: 100px; }
+  .mainTurismo {
+    grid-area: main; }
+    .mainTurismo .reservaTurismo {
+      margin-top: 7.5px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      border: 4.5px double #dfe1ee; }
+    .mainTurismo .tituloTurismo {
+      font-size: 22px; }
+    .mainTurismo .informacionprincipalTurismo {
+      font-size: 20px; }
+    .mainTurismo .clasesTour {
+      display: grid;
+      align-items: center;
+      justify-content: center; }
+      .mainTurismo .clasesTour .tourClasico {
+        width: 450px;
+        height: 250px; }
+        .mainTurismo .clasesTour .tourClasico .tituloClasico {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 20px; }
+        .mainTurismo .clasesTour .tourClasico .parrafosClasico {
+          font-size: 18px -1;
+          margin-right: 0px; }
+      .mainTurismo .clasesTour .tourPremium {
+        width: 450px;
+        height: 250px; }
+        .mainTurismo .clasesTour .tourPremium .tituloPremium {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 20px; }
+        .mainTurismo .clasesTour .tourPremium .parrafosPremium {
+          font-size: 17px;
+          margin-left: 0px; }
+    .mainTurismo .aclaraciones {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .mainTurismo .aclaraciones .tituloAclaracion {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px; }
+      .mainTurismo .aclaraciones .parrafoAclaraciones {
+        font-size: 17px;
+        text-align: justify;
+        margin-left: 60px;
+        margin-right: 60px; }
+  .volverTurismo {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .footerFlex .footerDos {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 20px;
+    width: 20px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 20px;
+    width: 20px; } }
+
+.bodyNosotros {
+  font-family: 'League Spartan', sans-serif;
+  display: grid;
+  gap: 18px;
+  background-image: linear-gradient(to right, #e7dcd8, #e7b7a5, #da957d);
+  grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+
+.headerNosotros {
+  grid-area: header;
+  background-image: url("../img/paisajedos.jpeg");
+  background-size: cover; }
+  .headerNosotros .logomenuNosotros {
     display: grid;
     grid-template-columns: 10% 90%;
     align-content: center;
+    justify-content: center; }
+    .headerNosotros .logomenuNosotros .encabezadoNosotros {
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+      .headerNosotros .logomenuNosotros .encabezadoNosotros .logoBodega {
+        height: 200px;
+        width: 200px;
+        margin-left: 10px; }
+    .headerNosotros .logomenuNosotros .menuNosotros {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros {
+        display: inline-block;
+        padding: 45px; }
+        .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros .enlaceNosotros {
+          color: #dfe1ee;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 18px; }
+      .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros:hover {
+        transform: scale(1.2);
+        transition: 0.7s; }
+  .headerNosotros .subtituloNosotros {
+    display: flex;
     justify-content: center;
-}
-
-.liContacto{
-    font-size: 20px;
-    padding: 40px;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #dfe1ee;
+    font-size: 30px;
     text-transform: uppercase;
-}
+    text-align: center; }
+  .headerNosotros .parrafoinicialNosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfe1ee;
+    text-align: center;
+    font-size: 17.5px;
+    margin-bottom: 150px; }
 
-.footer{
-    grid-area: footer;
-}
+.mainNosotros {
+  grid-area: main; }
+  .mainNosotros .reservaNosotros {
+    color: #101018;
+    text-transform: uppercase;
+    margin-top: 10px;
+    display: inline-block;
+    border: 10px double #dfe1ee;
+    position: sticky;
+    top: 0; }
+    .mainNosotros .reservaNosotros .enlacerelativoNosotros {
+      text-decoration: none;
+      color: #101018;
+      font-weight: bold; }
+  .mainNosotros .reservaNosotros:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px #dbc6be; }
+  .mainNosotros .historiaSanti {
+    font-size: 23px;
+    text-align: justify;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px; }
+    .mainNosotros .historiaSanti .informacionSanti {
+      margin: 15px; }
+  .mainNosotros .fotosNosotros {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; }
+    .mainNosotros .fotosNosotros .imagenesNosotros {
+      display: flex; }
+      .mainNosotros .fotosNosotros .imagenesNosotros .fotoSanti {
+        padding: 5px;
+        width: 320px;
+        height: 400px; }
+      .mainNosotros .fotosNosotros .imagenesNosotros .fotosantiDos {
+        padding: 5px;
+        width: 320px;
+        height: 400px; }
+      .mainNosotros .fotosNosotros .imagenesNosotros .fotosantiTres {
+        padding: 5px;
+        width: 320px;
+        height: 400px; }
 
-/* media queri mobile de contacto */
+.volverNosotros {
+  grid-area: volver;
+  margin-top: 150px;
+  text-align: center; }
+  .volverNosotros .linkarribaNosotros {
+    text-decoration: none;
+    color: black; }
 
-@media only screen and (min-width: 300px) and (max-width: 600px){
-    .bodyContacto{
-        display: grid;
-        grid-template-areas: "header header header header"
-                             "main main main main"
-                             "volver volver volver volver"
-                             "footer footer footer footer";
-    }
+.footer {
+  grid-area: footer; }
 
-    .headerContacto{
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .logoenContacto{
-        height: 130px;
-        width: 130px;
-    }
-
-    .encabezadoContacto{
-        text-align: center;
-    }
-
-    .logomenuContacto{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menuContacto{
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .body {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerNosotros {
+    grid-area: header; }
+    .headerNosotros .logomenuNosotros {
+      display: flex;
+      flex-direction: column; }
+      .headerNosotros .logomenuNosotros .encabezadoNosotros {
+        text-align: center; }
+        .headerNosotros .logomenuNosotros .encabezadoNosotros .logoNosotros {
+          height: 130px;
+          width: 130px; }
+      .headerNosotros .logomenuNosotros .menuNosotros {
         margin: 5px;
-        padding: 5px;
-    }
+        padding: 5px; }
+        .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros {
+          padding: 5px; }
+          .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros .enlaceNosotros {
+            font-size: 12.5px; }
+    .headerNosotros .subtituloNosotros {
+      margin-top: 15px;
+      font-size: 15px; }
+    .headerNosotros .parrafoinicialNosotros {
+      font-size: 13.5px;
+      margin-bottom: 50px; }
+  .mainNosotros {
+    grid-area: main; }
+    .mainNosotros .reservaNosotros {
+      margin-top: 5px;
+      font-size: 11px;
+      border: 3.5px double #dfe1ee; }
+    .mainNosotros .historiaSanti {
+      font-size: 17px; }
+    .mainNosotros .fotosNosotros {
+      display: grid;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px; }
+      .mainNosotros .fotosNosotros .imagenesNosotros {
+        display: grid; }
+        .mainNosotros .fotosNosotros .imagenesNosotros .fotoSanti {
+          width: 220px;
+          height: 220px; }
+        .mainNosotros .fotosNosotros .imagenesNosotros .fotosantiDos {
+          width: 220px;
+          height: 220px; }
+        .mainNosotros .fotosNosotros .imagenesNosotros .fotosantiTres {
+          width: 220px;
+          height: 220px; }
+  .volverNosotros {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 12px; }
+  .footerFlex .footerDos {
+    font-size: 18px -6;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 15px;
+    width: 15px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 15px;
+    width: 15px; } }
 
-    .menulistaContacto{
-        padding: 5px;
-    }
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .body {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: "header header header header" "main main main main" "volver volver volver volver" "footer footer footer footer"; }
+  .headerNosotros {
+    grid-area: header; }
+    .headerNosotros .logomenuNosotros {
+      display: flex;
+      flex-direction: column; }
+      .headerNosotros .logomenuNosotros .encabezadoNosotros {
+        text-align: center; }
+        .headerNosotros .logomenuNosotros .encabezadoNosotros .logoBodega {
+          height: 175px;
+          width: 175px; }
+      .headerNosotros .logomenuNosotros .menuNosotros {
+        margin: 5px;
+        padding: 5px; }
+        .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros {
+          padding: 5px; }
+          .headerNosotros .logomenuNosotros .menuNosotros .menulistaNosotros .enlaceNosotros {
+            font-size: 17px; }
+    .headerNosotros .subtituloNosotros {
+      margin-top: 15px;
+      font-size: 20px; }
+    .headerNosotros .parrafoinicialNosotros {
+      font-size: 17px;
+      margin-bottom: 100px; }
+  .mainNosotros {
+    grid-area: main; }
+    .mainNosotros .reservaNosotros {
+      margin-top: 7.5px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      border: 4.5px double #dfe1ee; }
+    .mainNosotros .historiaSanti {
+      font-size: 20px; }
+    .mainNosotros .fotosNosotros {
+      display: grid;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px; }
+      .mainNosotros .fotosNosotros .imagenesNosotros {
+        display: grid; }
+        .mainNosotros .fotosNosotros .imagenesNosotros .fotoSanti {
+          width: 300px;
+          height: 300px; }
+        .mainNosotros .fotosNosotros .imagenesNosotros .fotosantiDos {
+          width: 300px;
+          height: 300px; }
+        .mainNosotros .fotosNosotros .imagenesNosotros .fotosantiTres {
+          width: 300px;
+          height: 300px; }
+  .volverNosotros {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .footerFlex .footerDos {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 20px;
+    width: 20px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 20px;
+    width: 20px; } }
 
-    .enlaceContacto{
-        font-size: 12.5px;
-    }
+.body {
+  font-family: 'League Spartan', sans-serif;
+  background-image: linear-gradient(to right, #e7dcd8, #e7b7a5, #da957d);
+  display: grid;
+  gap: 18px;
+  grid-template-areas: "header header header header" "main main main main" "galeria galeria galeria galeria" "volver volver volver volver" "footer footer footer footer"; }
 
-    .subtituloContacto{
-        margin-top: 15px;
-        font-size: 15px;
-    }
+.header {
+  grid-area: header;
+  background-image: url("../img/viñedoreal.jpeg");
+  background-size: cover; }
+  .header .logoMenu {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-content: center;
+    justify-content: center; }
+    .header .logoMenu .encabezado {
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+      .header .logoMenu .encabezado .logoBodega {
+        height: 200px;
+        width: 200px;
+        margin-left: 10px; }
+    .header .logoMenu .menu {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .header .logoMenu .menu .menuLista {
+        display: inline-block;
+        padding: 45px; }
+        .header .logoMenu .menu .menuLista .enlace {
+          color: #dfe1ee;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 18px; }
+      .header .logoMenu .menu .menuLista:hover {
+        transform: scale(1.2);
+        transition: 0.7s; }
+  .header .subtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #dfe1ee;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center; }
+  .header .parrafoInicial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfe1ee;
+    text-align: center;
+    font-size: 17.5px;
+    margin-bottom: 150px; }
 
-    .parrafoinicialContacto{
-        font-size: 13.5px;
-        margin-bottom: 50px;
-    }
+.main {
+  grid-area: main; }
+  .main .reserva {
+    color: #101018;
+    text-transform: uppercase;
+    margin-top: 10px;
+    display: inline-block;
+    border: 10px double #dfe1ee;
+    position: sticky;
+    top: 0; }
+    .main .reserva .enlaceRelativo {
+      text-decoration: none;
+      color: #101018;
+      font-weight: bold; }
+  .main .reserva:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px #dbc6be; }
+  .main .primeraParte {
+    display: flex;
+    flex-flow: row;
+    justify-content: center; }
+    .main .primeraParte .fotoSierra {
+      height: 400px;
+      width: 600px; }
+    .main .primeraParte .informacionPrincipal {
+      text-align: justify;
+      display: flex;
+      height: 400px;
+      width: 300px;
+      margin-left: 30px;
+      color: black;
+      font-size: 20px;
+      overflow: hidden; }
+  .main .segundaParte {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main .segundaParte .informacionSecundaria {
+      text-align: justify;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 400px;
+      width: 300px;
+      margin-right: 30px;
+      color: black;
+      font-size: 20px;
+      overflow: hidden; }
+    .main .segundaParte .fotoUva {
+      height: 400px;
+      width: 600px; }
 
-    .formulario{
-        display: grid;
-        justify-content: center;
-    }
-    
-    .bordeFormulario{
-        border-radius: 10px;
-    }
-    
-    fieldset{
-        font-size: 15px;
-        display: grid;
-        justify-content: left;
-        width: 400px;
-        padding: 20px;
-        margin: 10px;
-    }
-    
-    .texterea{
+.galeria {
+  grid-area: galeria; }
+  .galeria .galeriaFlex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; }
+    .galeria .galeriaFlex .tituloGaleria {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 10px; }
+    .galeria .galeriaFlex .imagenes {
+      display: flex; }
+      .galeria .galeriaFlex .imagenes .fotoBarrica {
+        height: 300px;
         width: 300px;
-    }
-    
-    legend{
-        text-align: center;
+        padding: 10px; }
+      .galeria .galeriaFlex .imagenes .fotoSalon {
+        height: 300px;
+        width: 300px;
+        padding: 10px; }
+      .galeria .galeriaFlex .imagenes .fotoViñedo {
+        height: 300px;
+        width: 300px;
+        padding: 10px; }
+      .galeria .galeriaFlex .imagenes .fotoBarrica:hover {
+        transform: scale(1.1);
+        transition: 1s; }
+      .galeria .galeriaFlex .imagenes .fotoSalon:hover {
+        transform: scale(1.1);
+        transition: 1s; }
+      .galeria .galeriaFlex .imagenes .fotoViñedo:hover {
+        transform: scale(1.1);
+        transition: 1s; }
+
+.volver {
+  grid-area: volver;
+  margin-top: 150px;
+  text-align: center; }
+  .volver .linkArriba {
+    text-decoration: none;
+    color: black; }
+
+.footer {
+  grid-area: footer; }
+  .footer .footerFlex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #dfe1ee; }
+    .footer .footerFlex .footerUno {
+      margin: 30px;
+      text-transform: uppercase; }
+    .footer .footerFlex .footerDos {
+      margin-bottom: 30px; }
+    .footer .footerFlex .fotoTwitter {
+      height: 35px;
+      width: 35px; }
+    .footer .footerFlex .fotoInstagram {
+      height: 35px;
+      width: 35px; }
+    .footer .footerFlex .fotoInstagram:hover {
+      transform: scale(1.1); }
+    .footer .footerFlex .fotoTwitter:hover {
+      transform: scale(1.1); }
+    .footer .footerFlex .linkRedes {
+      text-decoration: none; }
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .body {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "galeria galeria galeria galeria" "volver volver volver volver" "footer footer footer footer"; }
+  .header {
+    grid-area: header; }
+    .header .logoMenu {
+      display: flex;
+      flex-direction: column; }
+      .header .logoMenu .encabezado {
+        text-align: center; }
+        .header .logoMenu .encabezado .logoBodega {
+          height: 130px;
+          width: 130px; }
+      .header .logoMenu .menu {
+        margin: 5px;
+        padding: 5px; }
+        .header .logoMenu .menu .menuLista {
+          padding: 5px; }
+          .header .logoMenu .menu .menuLista .enlace {
+            font-size: 12.5px; }
+    .header .subtitulo {
+      margin-top: 15px;
+      font-size: 15px; }
+    .header .parrafoInicial {
+      font-size: 13.5px;
+      margin-bottom: 50px; }
+  .main {
+    grid-area: main; }
+    .main .reserva {
+      margin-top: 5px;
+      font-size: 11px;
+      border: 3.5px double #dfe1ee; }
+    .main .primeraParte {
+      margin-top: 15px;
+      display: grid;
+      align-items: center; }
+      .main .primeraParte .informacionPrincipal {
+        height: 200px;
+        width: 300px;
+        margin-left: 0px;
+        font-size: 13.5px; }
+      .main .primeraParte .fotoSierra {
+        height: 200px;
+        width: 300px; }
+    .main .segundaParte {
+      display: grid;
+      align-items: center;
+      margin-top: 5px; }
+      .main .segundaParte .informacionSecundaria {
+        height: 200px;
+        width: 300px;
+        margin-right: 0px;
+        font-size: 13.5px; }
+      .main .segundaParte .fotoUva {
+        height: 200px;
+        width: 300px; }
+  .galeria {
+    grid-area: galeria; }
+    .galeria .galeriaFlex .tituloGaleria {
+      font-size: 13.5px; }
+    .galeria .galeriaFlex .imagenes {
+      display: grid; }
+      .galeria .galeriaFlex .imagenes .fotoBarrica {
+        padding: 5px;
+        margin: 0px;
+        height: 175px;
+        width: 175px; }
+      .galeria .galeriaFlex .imagenes .fotoSalon {
+        padding: 5px;
+        margin: 0px;
+        height: 175px;
+        width: 175px; }
+      .galeria .galeriaFlex .imagenes .fotoViñedo {
+        padding: 5px;
+        margin: 0px;
+        height: 175px;
+        width: 175px; }
+  .volver {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 12px; }
+  .footerFlex .footerDos {
+    font-size: 18px -6;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 15px;
+    width: 15px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 15px;
+    width: 15px; } }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .body {
+    display: grid;
+    grid-template-areas: "header header header header" "main main main main" "galeria galeria galeria galeria" "volver volver volver volver" "footer footer footer footer"; }
+  .header {
+    grid-area: header; }
+    .header .logoMenu {
+      display: flex;
+      flex-direction: column; }
+      .header .logoMenu .encabezado {
+        text-align: center; }
+        .header .logoMenu .encabezado .logoBodega {
+          height: 175px;
+          width: 175px; }
+      .header .logoMenu .menu {
+        margin: 5px;
+        padding: 5px; }
+        .header .logoMenu .menu .menuLista {
+          padding: 5px; }
+          .header .logoMenu .menu .menuLista .enlace {
+            font-size: 17px; }
+    .header .subtitulo {
+      margin-top: 15px;
+      font-size: 20px; }
+    .header .parrafoInicial {
+      margin-bottom: 100px;
+      font-size: 17px; }
+  .main {
+    grid-area: main; }
+    .main .reserva {
+      margin-top: 7.5px;
+      margin-bottom: 20px;
+      font-size: 13.5px;
+      border: 4.5px double #dfe1ee; }
+    .main .primeraParte {
+      display: grid;
+      align-items: center; }
+      .main .primeraParte .informacionPrincipal {
+        height: 200px;
+        width: 450px;
+        margin-left: 0px;
         font-size: 17.5px;
-    }
-
-    .nombreApellido{
-        width: 190px;
-    }
-
-    .emailContacto{
-        width: 210px;
-    }
-}
+        margin-bottom: 0px; }
+      .main .primeraParte .fotoSierra {
+        height: 300px;
+        width: 450px; }
+    .main .segundaParte {
+      display: grid;
+      align-items: center; }
+      .main .segundaParte .informacionSecundaria {
+        height: 200px;
+        width: 450px;
+        margin-right: 0px;
+        font-size: 17.5px; }
+      .main .segundaParte .fotoUva {
+        height: 300px;
+        width: 450px; }
+  .galeria {
+    grid-area: galeria; }
+    .galeria .galeriaFlex .tituloGaleria {
+      font-size: 17.5px; }
+    .galeria .galeriaFlex .imagenes .fotoBarrica {
+      padding: 5px;
+      margin: 0px;
+      height: 200px;
+      width: 200px; }
+    .galeria .galeriaFlex .imagenes .fotoSalon {
+      padding: 5px;
+      margin: 0px;
+      height: 200px;
+      width: 200px; }
+    .galeria .galeriaFlex .imagenes .fotoViñedo {
+      padding: 5px;
+      margin: 0px;
+      height: 200px;
+      width: 200px; }
+  .volver {
+    display: none; }
+  .footerFlex .footerUno {
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .footerFlex .footerDos {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px; }
+  .footerFlex .linkRedes .fotoTwitter {
+    height: 20px;
+    width: 20px; }
+  .footerFlex .linkRedes .fotoInstagram {
+    height: 20px;
+    width: 20px; } }

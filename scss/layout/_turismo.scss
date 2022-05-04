@@ -1,0 +1,441 @@
+@import "../utilities/variables";
+
+.bodyTurismo{
+    font-family: 'League Spartan', sans-serif;
+    display: grid;
+    gap: $font-principal;
+    background-image: linear-gradient(to right, rgb(231, 220, 216), rgb(231, 183, 165), rgb(218, 149, 125));
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "volver volver volver volver"
+                         "footer footer footer footer";
+}
+
+.headerTurismo{
+    grid-area: header;
+    background-image: url("../img/copitas.jpeg");
+    background-size: cover;
+    .logomenuTurismo{
+        @include nav;
+        .encabezadoTurismo{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            .logoBodega{
+                height: 200px;
+                width: 200px;
+                margin-left: 10px;
+            }
+        }
+        .menuTurismo{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .menulistaTurismo{
+                display: inline-block;
+                padding: 45px;
+                .enlaceTurismo{
+                    color: nth($colores,1);
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: $font-principal;
+                }
+            }
+            .menulistaTurismo:hover{
+                transform: scale(1.2);
+                transition: 0.7s;
+            }
+        }
+    }
+    .subtituloTurismo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: nth($colores,1);
+        font-size: $font-principal + 12;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .parrafoinicialTurismo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: nth($colores,1);
+        text-align: center;
+        font-size: $font-principal - 0.5;
+        margin-bottom: 150px;
+    }
+}
+
+.mainTurismo{
+    grid-area: main;
+    .reservaTurismo{
+        color: nth($colores,2);
+        text-transform: uppercase;
+        margin-top: 10px;
+        display: inline-block;
+        border: 10px double nth($colores,1);
+        position: sticky;
+        top: 0;
+        .enlacerelativoTurismo{
+            text-decoration: none;
+            color: nth($colores,2);
+            font-weight: bold;
+        }    
+    }
+    .reservaTurismo:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 2px rgb(219, 198, 190);
+    }
+    .tituloTurismo{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: $font-principal + 8;
+        margin: 10px;
+    }
+    .aclaraciones{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        .tituloAclaracion{
+            text-align: center;
+            font-size: $font-principal +6;
+            margin-bottom: 10px;
+        }
+        .parrafoAclaraciones{
+            font-size: $font-principal +1;
+            padding: 5px;
+        }
+    }
+}
+
+.tour{
+    margin-bottom: 10px;
+    .informacionprincipalTurismo{
+        font-size: $font-principal + 5;
+        text-align: justify;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 30px;
+    }
+    .clasesTour{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        .tourClasico{
+            width: 550px;
+            height: 250px;
+            .tituloClasico{
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: $font-principal + 4;
+            }
+            .parrafosClasico{
+                text-align: justify;
+                font-size: $font-principal + 1;
+                padding: 5px;
+                margin-right: 10px;
+            }
+        }
+        .tourPremium{
+            width: 550px;
+            height: 250px;
+            .tituloPremium{
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: $font-principal + 4;
+            }
+            .parrafosPremium{
+                text-align: justify;
+                font-size: $font-principal + 1;
+                padding: 5px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.volverTurismo{
+    @include volver;
+    .linkarribaTurismo{
+        @include arriba;
+    }
+}
+
+.footer{
+    grid-area: footer;
+}
+
+// media querie mobile turismo.html
+
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    .body{
+        display: grid;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "volver volver volver volver"
+                             "footer footer footer footer";
+    }
+    .headerTurismo{
+        grid-area: header;
+        .logomenuTurismo{
+            display: flex;
+            flex-direction: column;
+            .encabezadoTurismo{
+                text-align: center;
+                .logoBodega{
+                    height: 130px;
+                    width: 130px;
+                }
+            }
+            .menuTurismo{
+                margin: 5px;
+                padding: 5px;
+                .menulistaTurismo{
+                    padding: 5px;
+                    .enlaceTurismo{
+                        font-size: $font-principal - 5.5;
+                    }
+                }
+            }
+        }
+        .subtituloTurismo{
+            margin-top: 15px;
+            font-size: $font-principal - 3;
+        }
+        .parrafoinicialTurismo{
+            font-size: $font-principal - 4.5;
+            margin-bottom: 50px;
+        }
+    }
+    .mainTurismo{
+        grid-area: main;
+        .reservaTurismo{
+            margin-top: 5px;
+            font-size: $font-principal - 7;
+            border: 3.5px double nth($colores,1);
+        }
+        .tituloTurismo{
+            font-size: $font-principal;
+        }
+        .informacionprincipalTurismo{
+            font-size: $font-principal - 1;
+        }
+        .clasesTour{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            .tourClasico{
+                width: 300px;
+                height: 200px;
+                .tituloClasico{
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: $font-principal - 2;
+                }
+                .parrafosClasico{
+                    font-size: $font-principal - 4;
+                    margin-right: 0px;
+                }
+            }
+            .tourPremium{
+                width: 300px;
+                height: 200px;
+                .tituloPremium{
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: $font-principal - 2;
+                }
+                .parrafosPremium{
+                    font-size: $font-principal - 4;
+                    margin-left: 0px;
+                }
+            }
+        }
+        .aclaraciones{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .tituloAclaracion{
+                text-align: center;
+                font-size: $font-principal - 2;
+                margin-bottom: 10px;
+            }
+            .parrafoAclaraciones{
+                font-size: $font-principal - 4;
+                text-align: justify;
+                margin-left: 60px;
+                margin-right: 60px;
+            }
+        }
+    }
+
+    .volverTurismo{
+        display: none;
+    }
+
+    .footerFlex{
+        .footerUno{
+            text-align: center;
+            margin: 15px;
+            text-transform: uppercase;
+            font-size: $font-principal - 6;
+        }
+        .footerDos{
+            font-size: $font-principal -6;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .linkRedes{
+            .fotoTwitter{
+                height: 15px;
+                width: 15px;
+            }
+            .fotoInstagram{
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }  
+}
+
+// media queri tablet de turismo.html
+
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .body{
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "volver volver volver volver"
+                             "footer footer footer footer";
+    }
+    .headerTurismo{
+        grid-area: header;
+        .logomenuTurismo{
+            display: flex;
+            flex-direction: column;
+            .encabezadoTurismo{
+                text-align: center;
+                .logoBodega{
+                    height: 175px;
+                    width: 175px;
+                }
+            }
+            .menuTurismo{
+                margin: 5px;
+                padding: 5px;
+                .menulistaTurismo{
+                    padding: 5px;
+                    .enlaceTurismo{
+                        font-size: $font-principal - 1;
+                    }
+                }
+            }
+        }
+        .subtituloTurismo{
+            margin-top: 15px;
+            font-size: $font-principal +2 ;
+        }
+        .parrafoinicialTurismo{
+            font-size: $font-principal - 1;
+            margin-bottom: 100px;
+        }
+    }
+
+    .mainTurismo{
+        grid-area: main;
+        .reservaTurismo{
+            margin-top: 7.5px;
+            margin-bottom: 20px;
+            font-size: $font-principal - 4.5;
+            border: 4.5px double nth($colores,1);
+        }
+        .tituloTurismo{
+            font-size: $font-principal + 4;
+        }
+        .informacionprincipalTurismo{
+            font-size: $font-principal +2 ;
+        }
+        .clasesTour{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            .tourClasico{
+                width: 450px;
+                height: 250px;
+                .tituloClasico{
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: $font-principal +2;
+                }
+                .parrafosClasico{
+                    font-size: $font-principal -1;
+                    margin-right: 0px;
+                }
+            }
+            .tourPremium{
+                width: 450px;
+                height: 250px;
+                .tituloPremium{
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: $font-principal +2;
+                }
+                .parrafosPremium{
+                    font-size: $font-principal - 1;
+                    margin-left: 0px;
+                }
+            }
+        }
+        .aclaraciones{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            .tituloAclaracion{
+                text-align: center;
+                font-size: $font-principal +2;
+                margin-bottom: 10px;
+            }
+            .parrafoAclaraciones{
+                font-size: $font-principal - 1;
+                text-align: justify;
+                margin-left: 60px;
+                margin-right: 60px;
+            }
+        }
+    }
+
+    .volverTurismo{
+        display: none;
+    }
+
+    .footerFlex{
+        .footerUno{
+            text-align: center;
+            margin: 15px;
+            text-transform: uppercase;
+            font-size: $font-principal - 4;
+        }
+        .footerDos{
+            font-size: $font-principal - 4;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .linkRedes{
+            .fotoTwitter{
+                height: 20px;
+                width: 20px;
+            }
+            .fotoInstagram{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}

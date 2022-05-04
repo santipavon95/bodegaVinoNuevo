@@ -1,0 +1,353 @@
+@import "../utilities/variables";
+
+.bodyNosotros{
+    font-family: 'League Spartan', sans-serif;
+    display: grid;
+    gap: $font-principal;
+    background-image: linear-gradient(to right, rgb(231, 220, 216), rgb(231, 183, 165), rgb(218, 149, 125));
+    grid-template-areas: "header header header header"
+                         "main main main main"
+                         "volver volver volver volver"
+                         "footer footer footer footer";
+}
+
+.headerNosotros{
+    grid-area: header;
+    background-image: url("../img/paisajedos.jpeg");
+    background-size: cover;
+    .logomenuNosotros{
+        @include nav;
+        .encabezadoNosotros{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            .logoBodega{
+                height: 200px;
+                width: 200px;
+                margin-left: 10px;
+            }
+        }
+        .menuNosotros{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .menulistaNosotros{
+                display: inline-block;
+                padding: 45px;
+                .enlaceNosotros{
+                    color: nth($colores,1);
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: $font-principal;
+                }
+            }
+            .menulistaNosotros:hover{
+                transform: scale(1.2);
+                transition: 0.7s;
+            }
+        }
+    }
+    .subtituloNosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: nth($colores,1);
+        font-size: $font-principal + 12;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .parrafoinicialNosotros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: nth($colores,1);
+        text-align: center;
+        font-size: $font-principal - 0.5;
+        margin-bottom: 150px;
+    }
+}
+
+.mainNosotros{
+    grid-area: main;
+    .reservaNosotros{
+        color: nth($colores,2);
+        text-transform: uppercase;
+        margin-top: 10px;
+        display: inline-block;
+        border: 10px double nth($colores,1);
+        position: sticky;
+        top: 0;
+        .enlacerelativoNosotros{
+            text-decoration: none;
+            color: nth($colores,2);
+            font-weight: bold;
+        }    
+    }
+    .reservaNosotros:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 2px rgb(219, 198, 190);
+    }
+    .historiaSanti{
+        font-size: $font-principal + 5;
+        text-align: justify;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 30px;
+        .informacionSanti{
+            margin: 15px;
+        }
+    }
+    
+    .fotosNosotros{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        .imagenesNosotros{
+            display: flex;
+            .fotoSanti{
+                padding: 5px;
+                width: 320px;
+                height: 400px;
+            }
+            .fotosantiDos{
+                padding: 5px;
+                width: 320px;
+                height: 400px;
+            }
+            .fotosantiTres{
+                padding: 5px;
+                width: 320px;
+                height: 400px;
+            }
+        }
+    }
+}
+
+.volverNosotros{
+    @include volver;
+    .linkarribaNosotros{
+        @include arriba;
+    }
+}
+
+.footer{
+    grid-area: footer;
+}
+
+// media querie mobile sobreNosotros.html
+
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    .body{
+        display: grid;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "volver volver volver volver"
+                             "footer footer footer footer";
+    }
+    .headerNosotros{
+        grid-area: header;
+        .logomenuNosotros{
+            display: flex;
+            flex-direction: column;
+            .encabezadoNosotros{
+                text-align: center;
+                .logoNosotros{
+                    height: 130px;
+                    width: 130px;
+                }
+            }
+            .menuNosotros{
+                margin: 5px;
+                padding: 5px;
+                .menulistaNosotros{
+                    padding: 5px;
+                    .enlaceNosotros{
+                        font-size: $font-principal - 5.5;
+                    }
+                }
+            }
+        }
+        .subtituloNosotros{
+            margin-top: 15px;
+            font-size: $font-principal - 3;
+        }
+        .parrafoinicialNosotros{
+            font-size: $font-principal - 4.5;
+            margin-bottom: 50px;
+        }
+    }
+    .mainNosotros{
+        grid-area: main;
+        .reservaNosotros{
+            margin-top: 5px;
+            font-size: $font-principal - 7;
+            border: 3.5px double nth($colores,1);
+        }
+        .historiaSanti{
+            font-size: $font-principal - 1;
+        }
+        .fotosNosotros{
+            display: grid;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            .imagenesNosotros{
+                display: grid;
+                .fotoSanti{
+                    width: 220px;
+                    height: 220px;
+                }
+                .fotosantiDos{
+                    width: 220px;
+                    height: 220px;
+                }
+                .fotosantiTres{
+                    width: 220px;
+                    height: 220px;
+                }
+            }
+        }
+    }
+
+    .volverNosotros{
+        display: none;
+    }
+
+    .footerFlex{
+        .footerUno{
+            text-align: center;
+            margin: 15px;
+            text-transform: uppercase;
+            font-size: $font-principal - 6;
+        }
+        .footerDos{
+            font-size: $font-principal -6;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .linkRedes{
+            .fotoTwitter{
+                height: 15px;
+                width: 15px;
+            }
+            .fotoInstagram{
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }
+}
+
+// media querie tablet de sobreNosotros.html
+
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .body{
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "header header header header"
+                             "main main main main"
+                             "volver volver volver volver"
+                             "footer footer footer footer";
+    }
+    .headerNosotros{
+        grid-area: header;
+        .logomenuNosotros{
+            display: flex;
+            flex-direction: column;
+            .encabezadoNosotros{
+                text-align: center;
+                .logoBodega{
+                    height: 175px;
+                    width: 175px;
+                }
+            }
+            .menuNosotros{
+                margin: 5px;
+                padding: 5px;
+                .menulistaNosotros{
+                    padding: 5px;
+                    .enlaceNosotros{
+                        font-size: $font-principal - 1;
+                    }
+                }
+            }
+        }
+        .subtituloNosotros{
+            margin-top: 15px;
+            font-size: $font-principal + 2;
+        }
+        .parrafoinicialNosotros{
+            font-size: $font-principal - 1;
+            margin-bottom: 100px;
+        }
+    }
+
+    .mainNosotros{
+        grid-area: main;
+        .reservaNosotros{
+            margin-top: 7.5px;
+            margin-bottom: 20px;
+            font-size: $font-principal - 4.5;
+            border: 4.5px double nth($colores,1);
+        }
+        .historiaSanti{
+            font-size: $font-principal + 2;
+        }
+        .fotosNosotros{
+            display: grid;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            .imagenesNosotros{
+                display: grid;
+                .fotoSanti{
+                    width: 300px;
+                    height: 300px;
+                }
+                .fotosantiDos{
+                    width: 300px;
+                    height: 300px;
+                }
+                .fotosantiTres{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    .volverNosotros{
+        display: none;
+    }
+
+    .footerFlex{
+        .footerUno{
+            text-align: center;
+            margin: 15px;
+            text-transform: uppercase;
+            font-size: $font-principal - 4;
+        }
+        .footerDos{
+            font-size: $font-principal - 4;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .linkRedes{
+            .fotoTwitter{
+                height: 20px;
+                width: 20px;
+            }
+            .fotoInstagram{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
